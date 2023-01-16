@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/filestatustxt"
+            android:alpha="0"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/filestatustxt"
+            android:alpha="1" />
+    </ConstraintSet>
+    <Transition
+        app:autoTransition="animateToEnd"
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="2000">
+
+    </Transition>
+    <ConstraintSet android:id="@+id/startbtn">
+        <Constraint
+            android:id="@+id/btnOk"
+            android:alpha="0"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/endbtn">
+        <Constraint
+            android:id="@+id/btnOk"
+            android:alpha="1" />
+    </ConstraintSet>
+    <Transition
+        app:autoTransition="animateToEnd"
+        app:constraintSetEnd="@id/endbtn"
+        app:constraintSetStart="@id/startbtn"
+        app:duration="2000"
+        >
+    </Transition>
+    <Transition
+        app:autoTransition="animateToStart"
+        app:constraintSetEnd="@id/endbtn"
+        app:constraintSetStart="@id/startbtn"
+        app:duration="2000"
+        >
+    </Transition>
+</MotionScene>
